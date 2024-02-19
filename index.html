@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Site JavaScript</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            text-align: center;
         }
 
         header {
             background-color: #333;
             color: #fff;
-            text-align: center;
             padding: 1em;
         }
 
@@ -23,7 +23,6 @@
             background-color: #444;
             color: #fff;
             padding: 0.5em;
-            text-align: center;
         }
 
         section {
@@ -33,44 +32,67 @@
         footer {
             background-color: #333;
             color: #fff;
-            text-align: center;
             padding: 1em;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Meu Site</h1>
-        <p>Bem-vindo ao meu site simples</p>
+        <h1>Site JavaScript</h1>
+        <p>Bem-vindo ao meu site com JavaScript</p>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+        <button onclick="showPage('inicio')">Início</button>
+        <button onclick="showPage('sobre')">Sobre</button>
+        <button onclick="showPage('contato')">Contato</button>
     </nav>
 
     <section id="inicio">
         <h2>Início</h2>
-        <p>Esta é a página inicial do meu site.</p>
+        <p>Esta é a página inicial do site.</p>
     </section>
 
-    <section id="sobre">
+    <section id="sobre" style="display: none;">
         <h2>Sobre</h2>
-        <p>Esta seção fala um pouco sobre o meu site.</p>
+        <p>Esta seção fala um pouco sobre o site.</p>
     </section>
 
-    <section id="contato">
+    <section id="contato" style="display: none;">
         <h2>Contato</h2>
         <p>Você pode entrar em contato através do email@example.com.</p>
     </section>
 
     <footer>
-        <p>&copy; 2022 Meu Site. Todos os direitos reservados.</p>
+        <p>&copy; 2022 Site JavaScript. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Oculta todas as seções
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Mostra a seção desejada
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
