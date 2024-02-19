@@ -3,60 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Avançado com Vue.js</title>
-    <style>
-        /* Estilos aqui... */
-    </style>
+    <title>Meu Site Profissional</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div id="app">
         <header>
-            <h1>{{ pageTitle }}</h1>
-            <p>{{ pageSubtitle }}</p>
+            <nav>
+                <router-link to="/">Início</router-link>
+                <router-link to="/sobre">Sobre</router-link>
+                <router-link to="/portfolio">Portfólio</router-link>
+                <router-link to="/contato">Contato</router-link>
+            </nav>
         </header>
 
-        <nav>
-            <button @click="changePage('home')">Início</button>
-            <button @click="changePage('about')">Sobre</button>
-            <button @click="changePage('contact')">Contato</button>
-        </nav>
-
-        <section v-if="currentPage === 'home'">
-            <h2>Início</h2>
-            <p>Esta é a página inicial do site.</p>
-        </section>
-
-        <section v-else-if="currentPage === 'about'">
-            <h2>Sobre</h2>
-            <p>Esta seção fala um pouco sobre o site.</p>
-        </section>
-
-        <section v-else-if="currentPage === 'contact'">
-            <h2>Contato</h2>
-            <p>Você pode entrar em contato através do email@example.com.</p>
-        </section>
+        <router-view></router-view>
 
         <footer>
-            <p>&copy; {{ currentYear }} Site Avançado com Vue.js. Todos os direitos reservados.</p>
+            <p>&copy; {{ currentYear }} Meu Site Profissional. Todos os direitos reservados.</p>
         </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3"></script>
     <script>
+        // Componentes Vue.js
+        const Home = { template: '<div><h2>Início</h2><p>Bem-vindo ao meu site profissional.</p></div>' };
+        const Sobre = { template: '<div><h2>Sobre</h2><p>Conheça mais sobre mim e minha experiência.</p></div>' };
+        const Portfolio = { template: '<div><h2>Portfólio</h2><p>Veja alguns dos meus trabalhos.</p></div>' };
+        const Contato = { template: '<div><h2>Contato</h2><p>Entre em contato comigo para discutir oportunidades.</p></div>' };
+
+        // Configuração do Vue Router
+        const routes = [
+            { path: '/', component: Home },
+            { path: '/sobre', component: Sobre },
+            { path: '/portfolio', component: Portfolio },
+            { path: '/contato', component: Contato },
+        ];
+
+        const router = new VueRouter({
+            routes
+        });
+
+        // Instância Vue
         new Vue({
             el: '#app',
+            router,
             data: {
-                pageTitle: 'Site Avançado',
-                pageSubtitle: 'Construído com Vue.js',
-                currentPage: 'home',
                 currentYear: new Date().getFullYear(),
             },
-            methods: {
-                changePage(page) {
-                    this.currentPage = page;
-                }
-            }
         });
     </script>
 
