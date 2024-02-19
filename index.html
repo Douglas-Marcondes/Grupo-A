@@ -10,18 +10,40 @@
 
     <div id="app">
         <header>
-            <nav>
-                <router-link to="/">Início</router-link>
-                <router-link to="/sobre">Sobre</router-link>
-                <router-link to="/portfolio">Portfólio</router-link>
-                <router-link to="/contato">Contato</router-link>
-            </nav>
+            <div class="container">
+                <h1>{{ siteTitle }}</h1>
+                <p>{{ siteDescription }}</p>
+                <nav>
+                    <router-link to="/">Início</router-link>
+                    <router-link to="/sobre">Sobre</router-link>
+                    <router-link to="/portfolio">Portfólio</router-link>
+                    <router-link to="/servicos">Serviços</router-link>
+                    <router-link to="/contato">Contato</router-link>
+                </nav>
+            </div>
         </header>
 
         <router-view></router-view>
 
         <footer>
-            <p>&copy; {{ currentYear }} Meu Site Profissional. Todos os direitos reservados.</p>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h2>Contato</h2>
+                        <p>Email: contato@example.com</p>
+                        <p>Telefone: (11) 1234-5678</p>
+                    </div>
+                    <div class="footer-section">
+                        <h2>Redes Sociais</h2>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>&copy; {{ currentYear }} Meu Site Profissional. Todos os direitos reservados.</p>
+            </div>
         </footer>
     </div>
 
@@ -29,16 +51,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue-router@3"></script>
     <script>
         // Componentes Vue.js
-        const Home = { template: '<div><h2>Início</h2><p>Bem-vindo ao meu site profissional.</p></div>' };
-        const Sobre = { template: '<div><h2>Sobre</h2><p>Conheça mais sobre mim e minha experiência.</p></div>' };
-        const Portfolio = { template: '<div><h2>Portfólio</h2><p>Veja alguns dos meus trabalhos.</p></div>' };
-        const Contato = { template: '<div><h2>Contato</h2><p>Entre em contato comigo para discutir oportunidades.</p></div>' };
+        const Home = { template: '<div class="container"><h2>Início</h2><p>Bem-vindo ao meu site profissional.</p></div>' };
+        const Sobre = { template: '<div class="container"><h2>Sobre</h2><p>Conheça mais sobre mim e minha experiência.</p></div>' };
+        const Portfolio = { template: '<div class="container"><h2>Portfólio</h2><p>Veja alguns dos meus trabalhos.</p></div>' };
+        const Servicos = { template: '<div class="container"><h2>Serviços</h2><p>Descubra os serviços que ofereço.</p></div>' };
+        const Contato = { template: '<div class="container"><h2>Contato</h2><p>Entre em contato comigo para discutir oportunidades.</p></div>' };
 
         // Configuração do Vue Router
         const routes = [
             { path: '/', component: Home },
             { path: '/sobre', component: Sobre },
             { path: '/portfolio', component: Portfolio },
+            { path: '/servicos', component: Servicos },
             { path: '/contato', component: Contato },
         ];
 
@@ -51,11 +75,11 @@
             el: '#app',
             router,
             data: {
+                siteTitle: 'Meu Site Profissional',
+                siteDescription: 'Construído com Vue.js',
                 currentYear: new Date().getFullYear(),
             },
         });
     </script>
-
 </body>
-    <P>CORINTHIANS MAIOR DO BRASIL PALMIRAS FRACO</P>
 </html>
