@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="titulo">Meu Site Profissional</title>
-    <link rel="stylesheet" type="text/css" href="index.css" >
-    <link rel="stylesheet" href="index.java" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4; /* Cor de fundo da página */
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+  </style>
+  <title>Página Inicial</title>
 </head>
 <body>
-
-    <div id="app">
-        <header>
-            <div class="container">
-                <h1 class="titulo"> Login</h1>
-                <p>{{ siteDescription }}</p>
-                <nav>
-                    <router-link to="/">Início</router-link>
-                    <router-link to="/sobre">Sobre</router-link>
-                    <router-link to="/portfolio">Portfólio</router-link>
-                    <router-link to="/servicos">Serviços</router-link>
-                    <router-link to="/contato">Contato</router-link>
-                </nav>
-            </div>
-        </header>
-
-        <router-view></router-view>
-
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h2>Contato</h2>
-                        <p>Email: contato@example.com</p>
-                        <p>Telefone: (11) 1234-5678</p>
-                    </div>
-                    <div class="footer-section">
-                        <h2>Redes Sociais</h2>
-                        <ul>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p>&copy; {{ currentYear }} Meu Site Profissional. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-    </div>
+  <div class="container">
+    <h1>Bem-vindo à Página Inicial</h1>
+    <p>Este é um exemplo de página centralizada.</p>
+  </div>
 </body>
 </html>
 
