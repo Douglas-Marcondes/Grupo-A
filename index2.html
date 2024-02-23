@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --primary-color: #3498db; /* Cor principal */
+      --secondary-color: #ecf0f1; /* Cor de fundo */
+      --text-color: #333; /* Cor do texto principal */
+      --text-light-color: #666; /* Cor do texto secundário */
+      --button-hover-color: #2980b9; /* Cor do botão ao passar o mouse */
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -12,7 +20,9 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: #f4f4f4; /* Cor de fundo da página */
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .container {
@@ -20,11 +30,52 @@
     }
 
     h1 {
-      color: #333;
+      color: var(--primary-color);
     }
 
     p {
-      color: #666;
+      color: var(--text-light-color);
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--button-hover-color);
+    }
+
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: var(--button-hover-color);
     }
   </style>
   <title>Página Inicial</title>
@@ -32,8 +83,29 @@
 <body>
   <div class="container">
     <h1>Bem-vindo à Página Inicial</h1>
-    <p>Este é um exemplo de página centralizada.</p>
+    <p>Este é um exemplo de página centralizada e interativa.</p>
+    <button onclick="changeColors()">Mudar Cores</button>
+    <form>
+      <input type="text" placeholder="Seu Nome">
+      <input type="email" placeholder="Seu E-mail">
+      <input type="submit" value="Enviar">
+    </form>
   </div>
+
+  <script>
+    function changeColors() {
+      document.body.style.backgroundColor = getRandomColor();
+      document.body.style.color = getRandomColor();
+    }
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
 </body>
 </html>
-
