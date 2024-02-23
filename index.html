@@ -103,75 +103,68 @@
 
 
 
-    <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abas de Login e Registro</title>
+<title>Página de Login</title>
 <style>
     body {
         font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
         margin: 0;
         padding: 0;
     }
-    .tab {
-        display: none;
+    .container {
+        width: 300px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .tab.active {
-        display: block;
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
     }
 </style>
 </head>
 <body>
 
-<div class="tabs">
-    <button onclick="openTab('login')">Login</button>
-    <button onclick="openTab('register')">Registrar</button>
-</div>
-
-<div id="login" class="tab active">
+<div class="container">
     <h2>Login</h2>
-    <form action="login.php" method="POST">
-        <label for="username">Usuário:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Senha:</label><br>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Login">
+    <form action="#">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Entrar">
     </form>
 </div>
 
-<div id="register" class="tab">
-    <h2>Registro</h2>
-    <form action="register.php" method="POST">
-        <label for="new_username">Novo Usuário:</label><br>
-        <input type="text" id="new_username" name="new_username"><br>
-        <label for="new_password">Nova Senha:</label><br>
-        <input type="password" id="new_password" name="new_password"><br><br>
-        <input type="submit" value="Registrar">
-    </form>
-</div>
 
-<script>
-    function openTab(tabName) {
-        var i, tabcontent, tabs;
-        tabcontent = document.getElementsByClassName("tab");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tabs = document.getElementsByClassName("tabs")[0].getElementsByTagName("button");
-        for (i = 0; i < tabs.length; i++) {
-            tabs[i].className = tabs[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        event.currentTarget.className += " active";
-    }
-    openTab("login"); // Open default tab
-</script>
 
-</body>
-</html>
 
+
+
+    
 </body>
     
 </html>
