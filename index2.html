@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
-   <img src="file:///tmp/guest-cagjwx/Imagens/logo1.png">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: -20px;
-            margin-left:-20px;
-            margin-left:-20px;
+            margin: 0;
+            padding: 0;
         }
         header {
             background-color: #4CAF50;
@@ -29,13 +27,20 @@
             bottom: 0;
             width: 100%;
         }
-    </style>-
+        #logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>Minha Página</h1>
     </header>
+
+    <img id="logo" src="file:///tmp/guest-cagjwx/Imagens/logo1.png" alt="Logo da Minha Página">
 
     <main>
         <h2>Bem-vindo à minha página!</h2>
