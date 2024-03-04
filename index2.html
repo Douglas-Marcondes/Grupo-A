@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de Produtos</title>
+<style>
+  /* Estilos simples para o formulário */
+  #search-form {
+    margin-top: 20px;
+  }
+  #search-input {
+    padding: 8px;
+    width: 200px;
+  }
+  #search-button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+<h2>Pesquisa de Produtos</h2>
+
+<form id="search-form">
+  <input type="text" id="search-input" placeholder="Digite o produto...">
+  <button type="submit" id="search-button">Pesquisar</button>
+</form>
+
+<!-- Resultado da pesquisa será exibido aqui -->
+<div id="search-results"></div>
+
+<script>
+  // Adicionando um evento de envio ao formulário
+  document.getElementById("search-form").addEventListener("submit", function(event) {
+    // Prevenir o comportamento padrão de envio do formulário
+    event.preventDefault();
+    // Obter o valor digitado pelo usuário
+    var searchTerm = document.getElementById("search-input").value;
+    // Realizar a lógica de pesquisa (aqui você pode adicionar sua própria lógica para buscar produtos)
+    // Por enquanto, vamos apenas exibir uma mensagem simples
+    var searchResults = "Resultados da pesquisa para: " + searchTerm;
+    // Exibir o resultado da pesquisa
+    document.getElementById("search-results").textContent = searchResults;
+  });
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
