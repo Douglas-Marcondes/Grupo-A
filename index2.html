@@ -5,11 +5,10 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jogos</title>
-
+<title>Pesquisa de Produtos</title>
 <style>
 
-#search-form {
+  #search-form {
     margin-top: 20px;
   }
   #search-input {
@@ -23,22 +22,50 @@
     border: none;
     cursor: pointer;
   }
- 
-        header {
+</style>
+
+<h2>Pesquisa de Produtos</h2>
+
+<form id="search-form">
+  <input type="text" id="search-input" placeholder="Digite o produto...">
+  <button type="submit" id="search-button">Pesquisar</button>
+</form>
+
+<!-- Resultado da pesquisa será exibido aqui -->
+<div id="search-results"></div>
+
+<script>
+  // Adicionando um evento de envio ao formulário
+  document.getElementById("search-form").addEventListener("submit", function(event) {
+    // Prevenir o comportamento padrão de envio do formulário
+    event.preventDefault();
+    // Obter o valor digitado pelo usuário
+    var searchTerm = document.getElementById("search-input").value;
+    // Realizar a lógica de pesquisa (aqui você pode adicionar sua própria lógica para buscar produtos)
+    // Por enquanto, vamos apenas exibir uma mensagem simples
+    var searchResults = "Resultados da pesquisa para: " + searchTerm;
+    // Exibir o resultado da pesquisa
+    document.getElementById("search-results").textContent = searchResults;
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <style>
+         header {
             background-color: red;
             padding: 10px;
             color: white;
-        }
+        } 
         body {
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 0;}
-       
-        main {
-            margin: 20px 0;
+            padding: 0;
         }
-         #logo {
+      
+        #logo {
             position: absolute;
             top: 0;
             left: 0;
@@ -50,11 +77,13 @@
            right: 100px;
         
         }
+        main {
+            margin: 20px 0;
+        }
         footer {
             background-color: red;
             padding: 10px;
             color: white;
-            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -65,37 +94,9 @@
 
     <header>
         <h1>jogos</h1>
-       
-      </style>
-      
-      <h2>Pesquisa de Produtos</h2>
-      
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="Digite o produto...">
-        <button type="submit" id="search-button">Pesquisar</button>
-      </form>
-      
-      <!-- Resultado da pesquisa será exibido aqui -->
-      <div id="search-results"></div>
-      
-      <script>
-        // Adicionando um evento de envio ao formulário
-        document.getElementById("search-form").addEventListener("submit", function(event) {
-          // Prevenir o comportamento padrão de envio do formulário
-          event.preventDefault();
-          // Obter o valor digitado pelo usuário
-          var searchTerm = document.getElementById("search-input").value;
-          // Realizar a lógica de pesquisa (aqui você pode adicionar sua própria lógica para buscar produtos)
-          // Por enquanto, vamos apenas exibir uma mensagem simples
-          var searchResults = "Resultados da pesquisa para: " + searchTerm;
-          // Exibir o resultado da pesquisa
-          document.getElementById("search-results").textContent = searchResults;
-        });
-      </script>
-        
     </header>
 
-    <img class="logodosite" id="logo" src="logo1.png" alt="Logo da Minha Página">
+    <img class="logodosite" id="logo" src="https://github.com/Douglas-Marcondes/Grupo-A/blob/main/logo1.png?raw=true.png" alt="Logo da Minha Página">
 
 
     <footer>
