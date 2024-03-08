@@ -2,52 +2,84 @@
 <html lang="en">
 <head>
     
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Incrível</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .banner {
+            background-image: url('banner.jpg');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .banner h2 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site Incrível</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav>
+    <div class="banner">
+        <h2>Bem-vindo ao meu site incrível!</h2>
+    </div>
+    <!-- O conteúdo do seu site continua aqui -->
+</body>
+</html>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisa de Produtos</title>
-<style>
 
-  #search-form {
-    margin-top: 20px;
-  }
-  #search-input {
-    padding: 8px;
-    width: 200px;
-  }
-  #search-button {
-    padding: 8px 12px;
-    background-color:red;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-</style>
 
-<h2>Pesquisa de Produtos</h2>
 
-<form id="search-form">
-  <input type="text" id="search-input" placeholder="Digite o produto...">
-  <button type="submit" id="search-button">Pesquisar</button>
-</form>
 
-<!-- Resultado da pesquisa será exibido aqui -->
-<div id="search-results"></div>
 
-<script>
-  // Adicionando um evento de envio ao formulário
-  document.getElementById("search-form").addEventListener("submit", function(event) {
-    // Prevenir o comportamento padrão de envio do formulário
-    event.preventDefault();
-    // Obter o valor digitado pelo usuário
-    var searchTerm = document.getElementById("search-input").value;
-    // Realizar a lógica de pesquisa (aqui você pode adicionar sua própria lógica para buscar produtos)
-    // Por enquanto, vamos apenas exibir uma mensagem simples
-    var searchResults = "Resultados da pesquisa para: " + searchTerm;
-    // Exibir o resultado da pesquisa
-    document.getElementById("search-results").textContent = searchResults;
-  });
-</script>
+
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
