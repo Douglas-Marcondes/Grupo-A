@@ -1,1 +1,15 @@
 
+  #logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        } 
+
+        .logodosite {
+           position: relative;
+           height: 120px;
+           right: 100px;
+        
+        }
+
+ <img id="logo" src="https://github.com/Douglas-Marcondes/Grupo-A/blob/main/logo1.png?raw=true.png" alt="Logo da Minha Página">
