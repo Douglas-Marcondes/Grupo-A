@@ -69,6 +69,16 @@
             </span>
             <i class="uil uil-times close-icon"></i>
         </div>
+
+        <script> 
+let inputBox = document.querySelector(".input-box"),
+                searchIcon = document.querySelector(".icon"),
+                closeIcon = document.querySelector(".close-icon");
+
+            searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
+            closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+
+</script>
         <h1>Meu Site Incrível</h1>
     </header>
     <nav>
