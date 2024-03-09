@@ -80,13 +80,9 @@ input{
   transform: translateY(-50%) rotate(180deg);
 }
 
-
-<style>
-    
     titulo {
         position: relative;
         right: 150px;
         color: grey;
         
     }
-    </style>
