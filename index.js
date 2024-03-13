@@ -1,6 +1,6 @@
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue-router@3"></script>
-    <script>
+  src="https://cdn.jsdelivr.net/npm/vue@2">
+ src="https://cdn.jsdelivr.net/npm/vue-router@3">
+  
 
     let inputBox = document.querySelector(".input-box"),
                 searchIcon = document.querySelector(".icon"),
@@ -38,5 +38,5 @@
                 currentYear: new Date().getFullYear(),
             },
         });
-    </script>
+
 
