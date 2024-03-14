@@ -2,8 +2,9 @@
 header {
   background-color: #333;
   color: #fff;
-  padding: 0px 0;
-  text-align: center;}
+  padding: 5px 0;
+  padding-block-end: 0px;
+  }
 
   body {
   font-family: Arial, sans-serif;
@@ -20,7 +21,7 @@ header {
   font-family: 'Poppins', sans-serif;
 }
 
-.input-box {
+.input-box {padding-right: 0px;
   position: relative;
   height: 55px;
   max-width: 55px;
@@ -91,12 +92,12 @@ input{
 }
 
 h1 {
-  margin: -40px;
-  margin: 0;
+  text-align: center;
+  margin:5px ;
   font-size: 32px;
 }
 nav {
-  background-color: #444;
+  background-color: #555555d3;
   padding: 10px 0;
   text-align: center;
 }
@@ -110,6 +111,23 @@ nav a {
 }
 nav a:hover {
   background-color: #555;
+}
+.janela-flutuante {
+  color: white ;
+  display: none;
+  position:absolute;
+  background-color: #55555569;
+  padding: 20px;
+  border-radius:  15px ;
+  z-index: 1;
+}
+
+.janela-flutuante p{
+  margin-top: 10px;
+}
+
+.janela-flutuante.show {
+  display: block;
 }
 .banner {
   background-image: url('');
