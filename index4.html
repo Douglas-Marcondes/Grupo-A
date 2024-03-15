@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu com Tópicos Expansíveis</title>
+  <style>
+    .menu {
+      list-style: none;
+    }
 
+    .menu li {
+      margin-bottom: 10px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .sub-menu {
+      display: none;
+    }
+
+    .menu li:hover .sub-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li>
+      <a href="#">Tópico 1</a>
+      <ul class="sub-menu">
+        <li><a href="#">Opção 1.1</a></li>
+        <li><a href="#">Opção 1.2</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Tópico 2</a>
+      <ul class="sub-menu">
+        <li><a href="#">Opção 2.1</a></li>
+        <li><a href="#">Opção 2.2</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
