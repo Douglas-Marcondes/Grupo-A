@@ -1,4 +1,4 @@
-            let inputBox = document.querySelector(".input-box"),
+let inputBox = document.querySelector(".input-box"),
                 searchIcon = document.querySelector(".icon"),
                 closeIcon = document.querySelector(".close-icon");
 
@@ -8,8 +8,7 @@
             document.getElementById('item-flutuante').addEventListener('mouseover', function() {
                 document.getElementById('janela-flutuante').classList.add('show');
             });
-            
+
             document.getElementById('item-flutuante').addEventListener('mouseout', function() {
                 document.getElementById('janela-flutuante').classList.remove('show');
             });
-            
