@@ -1,145 +1,150 @@
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 5px 0;
+        padding-block-end: 0px;
+        }
+      
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+      
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      .input-box {padding-right: 0px;
+        position: relative;
+        height: 55px;
+        max-width: 55px;
+        width: 100%;
+        margin: 0 40px;
+        border-radius: 6px;
+        background-color: #fff;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .input-box.open{
+        max-width: 350px;
+      }
+      input{
+        position: relative;
+        outline: none;
+        border: none;
+        height: 100%;
+        width: 100%;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        background-color: #fff;
+      }
+      .input-box.open{
+        padding: 0 15px 0 65px;
+      }
+      .icon{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 60px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+      }
+      .search-icon,
+      .close-icon{
+        position: absolute;
+        top: 50%;
+        font-size: 30px;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .search-icon{
+        color: #000;
+        
+        transform: translateY(-50%) rotate(90deg);
+      }
+      .input-box.open .search-icon{
+        transform: translateY(-50%) rotate(0);
+      }
+      .close-icon{
+        right: -63px;
+        color: #000;
+        border-radius: 6px;
+        background: #fff;
+        padding: 5px 14px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-50%);
+      }
+      .input-box.open .close-icon{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(-50%) rotate(180deg);
+      }
+      
+      h1 {
+        text-align: center;
+        margin:5px ;
+        font-size: 32px;
+      }
+      nav {
+        background-color: #555555d3;
+        padding: 10px 0;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 50px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #555;
+      }
+      .janela-flutuante {
+        color: white ;
+        display: none;
+        position:absolute;
+        background-color: #55555569;
+        padding: 20px;
+        border-radius:  15px ;
+        z-index: 1;
+      }
+      
+      .janela-flutuante p{
+        margin-top: 10px;
+      }
+      
+      .janela-flutuante.show {
+        display: block;
+      }
+      .banner {
+        background-image: url('');
+        background-size: cover;
+        margin: 20px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;}
+        
+        .banner h2 {
+          font-size: 48px;
+          color: #fff;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 5px 0;
-  padding-block-end: 0px;
-  }
-
-  body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-.input-box {padding-right: 0px;
-  position: relative;
-  height: 55px;
-  max-width: 55px;
-  width: 100%;
-  margin: 0 40px;
-  border-radius: 6px;
-  background-color: #fff;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.input-box.open{
-  max-width: 350px;
-}
-input{
-  position: relative;
-  outline: none;
-  border: none;
-  height: 100%;
-  width: 100%;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
-  background-color: #fff;
-}
-.input-box.open{
-  padding: 0 15px 0 65px;
-}
-.icon{
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  width: 60px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-}
-.search-icon,
-.close-icon{
-  position: absolute;
-  top: 50%;
-  font-size: 30px;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.search-icon{
-  color: #000;
-  
-  transform: translateY(-50%) rotate(90deg);
-}
-.input-box.open .search-icon{
-  transform: translateY(-50%) rotate(0);
-}
-.close-icon{
-  right: -63px;
-  color: #000;
-  border-radius: 6px;
-  background: #fff;
-  padding: 5px 14px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-.input-box.open .close-icon{
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(-50%) rotate(180deg);
-}
-
-h1 {
-  text-align: center;
-  margin:5px ;
-  font-size: 32px;
-}
-nav {
-  background-color: #555555d3;
-  padding: 10px 0;
-  text-align: center;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 50px;
-  margin: 0 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-nav a:hover {
-  background-color: #555;
-}
-.janela-flutuante {
-  color: white ;
-  display: none;
-  position:absolute;
-  background-color: #55555569;
-  padding: 20px;
-  border-radius:  15px ;
-  z-index: 1;
-}
-
-.janela-flutuante p{
-  margin-top: 10px;
-}
-
-.janela-flutuante.show {
-  display: block;
-}
-.banner {
-  background-image: url('');
-  background-size: cover;
-  margin: 20px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;}
-  
-  .banner h2 {
-    font-size: 48px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+        .pesquisa {
+          position:relative;
+          height: -300px;
+       }
