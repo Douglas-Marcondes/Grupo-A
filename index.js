@@ -14,3 +14,15 @@ let inputBox = document.querySelector(".input-box"),
             document.getElementById('item-flutuante').addEventListener('mouseout', function() {
                 document.getElementById('janela-flutuante').classList.remove('show');
             });
+
+            document.getElementById('janela-flutuante').addEventListener('mouseover', function() {
+                document.getElementById('janela-flutuante').classList.add('show');
+            });
+
+            document.getElementById('janela-flutuante').addEventListener('mouseout', function() {
+                document.getElementById('janela-flutuante').classList.remove('show');
+            });
+
+            document.getElementById('item-flutuante').addEventListener('click', function() {
+                document.getElementById('janela-flutuante').classList.add('show');
+            });
