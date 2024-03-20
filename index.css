@@ -119,12 +119,12 @@ nav a:hover {
   background-color: #1d1d1d93;
   padding: 20px;
   border-radius:  15px ;
-  left: 745px;
+  left: 880px;
   z-index: 1;
 }
 
 .janela-flutuante p{
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .janela-flutuante.show {
