@@ -1,5 +1,19 @@
 
 
+document.addEventListener("DOMContentLoaded", function() {
+
+    var link = document.getElementById("textojanela");
+
+    link.addEventListener("click", function(event) {
+
+      event.preventDefault();
+  
+      alert("Conta criada com sucesso");
+  
+      window.location.href = link.href;
+    });
+  });
+  
 let inputBox = document.querySelector(".input-box"),
                 searchIcon = document.querySelector(".icon"),
                 closeIcon = document.querySelector(".close-icon");
